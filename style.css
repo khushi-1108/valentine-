@@ -1,0 +1,82 @@
+body{
+    margin:0;
+    padding:0;
+    min-height: 100vh;/*height of screen*/
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b1522;
+}
+.container{
+    text-align: center;
+}
+.heart{
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+    margin-bottom: 20px;
+}
+
+.heart:before{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    top: -50%;/*top round part*/
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044;
+
+}
+@keyframes heart{
+    0%{
+        transform: rotate(-45deg) scale(1.0); 
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+.heart:after{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    right: -50%;/*top round part*/
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044;
+
+}
+
+.valentine-question {
+    font-style: italic;
+    font-family: 'Lucida Sans';
+    margin-top: 20px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+button {
+    font-style: italic;
+    font-family: 'Lucida Sans';
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #dc537a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d60039;
+}
